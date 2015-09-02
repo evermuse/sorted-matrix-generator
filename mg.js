@@ -14,21 +14,19 @@ function matrixGenerator ( r, c ) {
 
   });
 
-  console.log(sortedArr);
-
   var multiArr = [];
 
   for (i = 0; i < r; i++) {
 
     multiArr[i] = [];
 
-    multiArr[i].push(sortedArr[i * c], sortedArr[i + (i * c)], sortedArr[i + (i * c)]);
+    for ( j = 0; j < c; j++)
+
+    multiArr[i].push(sortedArr[(j + (i * c))]);
 
   }
 
-  console.log(multiArr);
-
 }
 
-matrixGenerator( 4, 4 );
+matrixGenerator( 5, 5 );
 
